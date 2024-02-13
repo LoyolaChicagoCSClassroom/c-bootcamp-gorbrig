@@ -1,0 +1,7 @@
+explain step by step how to convert a string reversal java code into c code
+
+
+void reverseString(char str[], int length): This function takes a character array (str) and its length (length) as parameters and reverses the string in-place using a loop and swapping elements.
+main function : char str[] = "Hello";: Declares and initializes a character array (str) with the string "Hello".
+Main function : int length = sizeof(str) - 1;: Calculates the length of the string by using the sizeof operator and subtracting 1 to exclude the null terminator '\0'.
+main function : calls the reverseString function to reverse the sotred string 

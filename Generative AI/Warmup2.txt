@@ -1,0 +1,21 @@
+explain step by step how to convert basic calculator java code into c code
+
+Explanation of the conversion:
+
+Removed the Java-specific import statement (import java.util.Scanner;) because C does not have a direct equivalent. In C, we use standard input/output functions.
+Declared num1 and num2 as double to store the input numbers.
+Used printf and scanf functions for output and input, respectively.
+The format specifier %lf is used in scanf for reading double-precision floating-point numbers.
+Replaced System.out.println with printf for output. Added .2lf to specify two decimal places in the printed results.
+Added a conditional check to avoid division by zero. If the second number is zero, it prints an error message.
+
+I then asked what is scanf 
+
+scanf is a fundamental input function in the C programming language, imperative for reading formatted input. Its significance lies in its capability to acquire data from standard input, typically the keyboard, and process it according to specified format specifiers.
+Format specifiers like %d for integers, %f for floats, and %lf for double-precision floats are employed to precisely define the type of data being read.
+scanf is a tool of precision and responsibility
+
+i then asked what are %1f and %21f
+
+%1f: This format specifier is used to format a floating-point number with a minimum width of 1 character. It implies that the number will be printed with at least one digit to the left of the decimal point. If the number has more than one digit before the decimal point, it will be printed with all its digits.
+%21f: This format specifier is used to format a floating-point number with a minimum width of 21 characters. It provides more space for the printed number, and any extra space will be padded with spaces. 

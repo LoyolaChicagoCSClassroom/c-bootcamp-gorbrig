@@ -1,0 +1,26 @@
+explain how the main differs from java and c in this code 
+
+Function Signature:
+Java: public static void main(String[] args)
+C: int main()
+In Java, the main function is declared as public static void, indicating that it is a public static method with no return value. In C, the main function is declared as int, indicating that it returns an integer.
+
+Array Size Calculation:
+Java: The size of the array is not explicitly calculated in Java.
+C: In C, the size of the array is calculated using sizeof(array) / sizeof(array[0]).
+
+Print Statements:
+Java: Uses System.out.println for printing to the console.
+C: Uses printf for formatted printing in C. The format specifier %d is used for integers.
+
+Return Statement:
+Java: The main function in Java doesn't explicitly have a return statement. The convention is to exit with System.exit(0) for success.
+C: The main function in C returns an integer (return 0;) to the operating system, indicating successful program execution. Other values can be used to indicate errors.
+
+Variable Declaration:
+Java: Variables are declared within the main method.
+C: Variables are declared at the beginning of the main function.
+
+Function Call:
+Java: Calls the linearSearch method directly.
+C: Calls the linearSearch function.

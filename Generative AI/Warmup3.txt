@@ -1,0 +1,8 @@
+explain step by step how to convert working with arrays java code into c code
+
+
+In C, the array size is not explicitly specified; instead, it is inferred from the number of elements in the initialization list. So, int numbers[] = {1, 2, 3, 4, 5}; is used to declare and initialize the array.
+The loop for calculating the sum uses an index-based approach (for (int i = 0; i < arrayLength; ++i)) instead of the enhanced for-loop used in Java, as C does not have a direct equivalent to Java's enhanced for-loop.
+The array length is calculated using the formula sizeof(numbers) / sizeof(numbers[0]).
+To calculate the average, it's essential to cast one of the operands to double to perform floating-point division, ensuring the result is a double-precision floating-point number.
+The format specifier %d is used for printing integers, and %.2lf is used to print the average with two decimal places.

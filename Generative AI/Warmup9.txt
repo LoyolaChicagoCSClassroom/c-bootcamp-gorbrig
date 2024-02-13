@@ -1,0 +1,21 @@
+explain how file operations differes in java to c code 
+
+File Opening and Closing:
+In Java, you declare a filename as a string, create a FileWriter object, and use close() to close the file.
+In C, you declare a character array for the filename, use fopen to open the file with a specified mode (e.g., "w" for writing, "r" for reading), and fclose to close the file.
+
+File Writing:
+In Java, you use fw.write("Hello, World!"); to write to the file.
+In C, you use fprintf(fw, "Hello, World!"); to write formatted data to the file.
+
+File Reading:
+In Java, you use a BufferedReader to read lines from the file in a loop.
+In C, you use fgets to read lines from the file in a loop, and you store each line in a character array.
+
+Error Handling:
+In Java, error handling is implicit with the use of exceptions (throws IOException).
+In C, you explicitly check if the file opening was successful (if (fw == NULL || fr == NULL)) and print an error message if not.
+
+Closing the File:
+In Java, you use fw.close() and br.close() to close the file after operations are complete.
+In C, you use fclose(fw) and fclose(fr) to close the file after operations are complete.

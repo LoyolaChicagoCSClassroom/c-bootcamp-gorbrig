@@ -1,0 +1,8 @@
+explain step by step how to convert hello world java code into c code
+
+Let's break down the changes step by step:
+
+Header Files: In C, you use #include directives to include necessary header files. The #include <stdio.h> directive is added to include the standard input/output functions.
+Function Declaration: In C, the main function returns an int and takes no parameters. Therefore, the public static void main(String[] args) declaration in Java is replaced with int main() in C.
+Print Statement: The System.out.println statement in Java is replaced with printf in C. Also, \n is used for a newline character.
+Return Statement: In C, the return 0; statement is added at the end of the main function to indicate a successful execution.

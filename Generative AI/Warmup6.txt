@@ -1,0 +1,20 @@
+how does the factorial being set up differ from java to c in this code 
+
+
+Function Signature:
+Java: public static int factorial(int n) { ... }
+C: int factorial(int n) { ... }
+Both Java and C start the function declaration with the return type (int), followed by the function name (factorial), and the parameter list (int n).
+
+Recursive Logic:
+Both Java and C use the same recursive logic to calculate the factorial. If n is less than or equal to 0, the function returns 1. Otherwise, it multiplies n by the result of the recursive call to factorial(n - 1).
+
+Access Modifiers:
+In Java, the public modifier indicates that the method can be accessed from outside the class. In this case, it's a static method.
+C does not have access modifiers like public or private for functions. By default, functions in C are accessible within the file where they are defined.
+
+Static Keyword:
+In Java, the static keyword indicates that the method belongs to the class rather than an instance of the class. It can be called without creating an instance of the class.
+C does not use the static keyword in function declarations in the same way. In C, functions are typically declared at the file scope and can be called from any part of the file.
+
+In summary, the core logic and structure of the factorial function remain very similar between Java and C. The main differences lie in language-specific syntax and features, such as access modifiers and the use of the static keyword in Java.

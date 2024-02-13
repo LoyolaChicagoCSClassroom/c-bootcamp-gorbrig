@@ -1,1 +1,9 @@
-[![Open in Codespaces](https://classroom.github.com/assets/launch-codespace-7f7980b617ed060a017424585567c406b6ee15c891e84e1186181d67ecf80aa0.svg)](https://classroom.github.com/open-in-codespaces?assignment_repo_id=13581980)
+# comp310-starter
+This is a starter repository for COMP 310 (Operating Systems) students. You should fork this to work on your own homework. Please do not submit pull requests.
+
+## Learning objectives
+
+- Programming in C
+- Separate compilation
+- Build automation using CMake
+- Unit testing using GoogleTest

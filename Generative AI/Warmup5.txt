@@ -1,0 +1,7 @@
+explain step by step how to convert matrix operation java code into c code
+
+In C, we define the dimensions of the matrices using #define for better flexibility.
+Functions (addMatrices, multiplyMatrices, printMatrix) are declared and defined for modularity and readability.
+The loop indices and array dimensions are adjusted based on the predefined constants ROWS and COLS.
+Used printf for formatted output.
+main now explicitly calls functions with the matrices and their results.
