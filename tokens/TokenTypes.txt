@@ -1,0 +1,21 @@
+Token Types:
+1. Numbers:
+   - Characteristics: Numeric values consisting of digits, possibly with a decimal point for floating-point numbers.
+   - Identification: Starts with a digit, possibly preceded by a sign (+/-) for signed numbers.
+   - Examples: 123, -45, 3.14
+
+2. Arithmetic Operators:
+   - Characteristics: Basic mathematical operators.
+   - Identification: Limited set of characters: +, -, *, /.
+   - Examples: +, -, *, /
+
+3. Symbols:
+   - Characteristics: Special characters with specific meanings in the language.
+   - Identification: Limited set of characters: :, ;.
+   - Examples: :, ;
+
+4. Words:
+   - Characteristics: Sequences of printable characters forming identifiers or commands.
+   - Identification: Any sequence of characters not matching the above token types.
+   - Examples: FORTH, STACK, DUP, SWAP
+
