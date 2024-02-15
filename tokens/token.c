@@ -1,3 +1,4 @@
+#include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 #include "token.h"
@@ -17,4 +18,3 @@ void destroy_token(struct token_t *token) {
         free(token);
     }
 }
-

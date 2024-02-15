@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <ctype.h>
 #include "token.h"
 
 int main() {
@@ -15,11 +16,11 @@ int main() {
         while (token_str != NULL) {
             // Determine token type
             enum token_type_t token_type;
-            if (isdigit(token_str[0])) {
+            if (isdigit((unsigned char)token_str[0])) {
                 token_type = NUMBER;
             } else if (strchr("+-*/", token_str[0]) != NULL) {
                 token_type = OPERATOR;
-            } else if (strchr(":", ";", token_str[0]) != NULL) {
+            } else if (strchr(":", token_str[0]) != NULL || strchr(";", token_str[0]) != NULL) {
                 token_type = SYMBOL;
             } else {
                 token_type = WORD;
