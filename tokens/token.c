@@ -18,3 +18,20 @@ void destroy_token(struct token_t *token) {
         free(token);
     }
 }
+
+const char *token_type_to_string(enum token_type_t type) {
+    switch (type) {
+        case NUMBER:
+            return "Number";
+        case OPERATOR:
+            return "Operator";
+        case SYMBOL:
+            return "Symbol";
+        case WORD:
+            return "Word";
+        default:
+            return "Unknown";
+    }
+}
+
+

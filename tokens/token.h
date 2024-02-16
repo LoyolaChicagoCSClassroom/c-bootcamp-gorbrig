@@ -17,4 +17,6 @@ struct token_t {
 struct token_t *create_token(enum token_type_t type, const char *text);
 void destroy_token(struct token_t *token);
 
+const char *token_type_to_string(enum token_type_t type);
+
 #endif // TOKEN_H

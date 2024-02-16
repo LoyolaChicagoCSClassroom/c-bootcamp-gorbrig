@@ -28,7 +28,7 @@ int main() {
 
             // Create and print token
             struct token_t *token = create_token(token_type, token_str);
-            printf("Token: %s\n", token->text);
+            printf("Token: Type: %s, Text %s\n",token_type_to_string (token_type),token->text);
             
             // Free token memory
             destroy_token(token);
