@@ -1,0 +1,45 @@
+Set Up GitHub Repository:
+Log in to GitHub and create a new repository for R-FORTH.
+Name it appropriately, like "R-FORTH" or "Rambler-FORTH".
+You can use GitHub Classroom if that's how your instructor set up the assignment.
+
+Copy COMP310 Bootcamp Structure:
+Clone your COMP310 Bootcamp repository to your local machine if you haven't already.
+Copy the necessary files and folder structure into your new R-FORTH repository.
+Make sure to include the CMake structure, as it will be helpful for organizing your project.
+
+Define Token Structure:
+Create a new file token.h for defining the abstract datatype token_t and enum token_type_t.
+Define the structure of token_t, including token_type_t and text as a string.
+Ensure to add guards to prevent multiple inclusion using #ifndef, #define, and #endif.
+
+Implement Token Module:
+Create a new file token.c to implement functions operating on token_t.
+Implement functions for creating, reading, and manipulating tokens.
+Ensure to include token.h at the beginning of token.c.
+
+Generate Test Data:
+Collect forth programs from the tutorials provided in class.
+Ensure to have a variety of programs that encompass different token types (numbers, operators, symbols, words).
+
+Write Main Module:
+Create a new file, say main.c, which will serve as the entry point for the program.
+Include necessary headers, like stdio.h, string.h, and your custom token.h.
+Write the main() function.
+Use getline() to read input from the standard input line by line.
+Parse each line to extract tokens by splitting them using whitespace as delimiters.
+Classify each token by performing basic checks or using regular expressions.
+Print out each token along with its class (e.g., Number, Operator, Symbol, or Word).
+
+Compile and Run:
+Set up your CMakeLists.txt to compile the project properly.
+Compile your project using CMake or your preferred build system.
+Run the executable, providing input either from a file or typing directly into the standard input.
+Ensure that the program correctly parses the input and outputs the tokens along with their classes.
+
+Testing and Debugging:
+Test your program with different inputs, including edge cases.
+Debug any issues that arise during testing.
+Refactor and improve your code as needed.
+By following these steps, you should be able to set up your R-FORTH project, implement the token module, generate test data, write the main module, compile and run the program, and finally test and debug it to ensure it functions correctly.
+
