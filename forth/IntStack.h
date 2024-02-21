@@ -6,11 +6,18 @@
 
 class IntStack {
 public :
+	//stack operations
 	void push(int value);
 	int pop();
 	int top() const;
 	void dup();
 	void swap();
+
+	//Arithmetic operations
+	void add();
+	void subtract();
+	void multiply();
+	void divide();
 
 private:
 	std::vector<int> stack;

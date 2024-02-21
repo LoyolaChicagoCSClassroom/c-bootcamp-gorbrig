@@ -28,6 +28,35 @@ void IntStack::swap() {
     push(top2);
 }
 
+void IntStack::add() {
+	int n2 = pop(); // pop the top element 
+	int n1 = pop(); // pop the next top element
+	push(n1 + n2); //push the sum of the 2 elements back onto the stack 
+}
+
+void IntStack::subtract() {
+	int n2 = pop(); //pop the top element 
+	int n1 = pop(); //pop the next top element 
+	push(n1-n2); //push the difference of the 2 elements back on the stack}
+
+void IntStack::multiply() {
+	int n2 = pop(); //pop the top element
+	int n1 = pop(); //pop the next top element 
+	push(n1 * n2); //push the product of the 2 elements back onto the stack 
+}
+
+void IntStack::divide() {
+	int n2 = pop(); //pop the top element 
+	if(n2 ==0) throw std::runtime_error("Division by zero");
+	int n1 pop(); //pop the next top element 
+	push(n1 / n2); //push the quotient of the 2 elements back on the stack 
+}
+
+
+
+
+
+
 // Implement other operations here...
 
 
