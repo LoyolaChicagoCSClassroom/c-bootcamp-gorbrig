@@ -12,6 +12,8 @@ public :
 	int top() const;
 
 	//Arithmetic operations
+	void divMod();
+	void mod();
 	void add();
 	void subtract();
 	void multiply();
