@@ -84,6 +84,60 @@ void IntStack::divide() {
 	push(n1 / n2); //push the quotient of the 2 elements back on the stack 
 }
 
+void IntStack::divMod() {
+	if(stack.size() < 2) { 
+		throw std::runtime_error("Not enough elements for '/MOD'");
+	}
+
+	int divisor = pop(); // n2
+	int dividend = pop(); // n1
+
+	if(divisor == 0) {
+		throw std::runtime_error("Division by 0");
+	}
+
+	int quotient = dividend / divisor;
+	int remainder = dividend % divisor;
+
+	push(remainder);
+	push(quotient);
+}
+
+//divMod
+//checks if there are at least 2 elements
+//if there are less than 2 elements it throws a runtime error 
+//pops the top element from the stack it will be used as the divisor n2 in the operation 
+//pops the next top element from the stack it will be used as the divident n1 in the operation 
+//checks if the n2 is 0 to prevent division by 0 which would cause a runtime error
+//does the division operation and stores the quotient of dividing the dividend n1 by the divisor n2
+//pushes the remainder and then the quotient onto the stack in the specified order. the remainder should be pushed 1st followed by the quotient 
+
+void IntStack::mod() {
+	if(stack.size() < 2) {
+		throw std::runtime_error("Not enough elements for 'MOD'");
+	}
+
+	int divisor = pop(); // n2
+	int dividend = pop(); // n1
+
+	if(divisor == 0) {
+		throw std::runtime_error("Division by 0");
+	}
+
+	int remainder = dividend % divisor;
+
+	push(remainder);
+}
+
+//Mod
+//checks if there are at least 2 elements
+//if there are less than 2 elements it throws a runtime error
+//pops the top element from the stack to be used as the divisor n2
+//pops the next top element from the stack to be used as the dividend n1
+//checks if the divisor n2 is zero to prvent division by zero it would throw a runtime error
+//calculate the remainder divding the dividend n1 by the divisor n2 using modulo operation 
+//pushes the calculated remainder onto the stack
+
 //stack manipulation 
 
 void IntStack::over() {
