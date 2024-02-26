@@ -107,8 +107,6 @@ int int_stack_divide(int_stack_t *stk) {
 	int top_value, next_to_top_value;
 	int_stack_pop(stk, &top_value);
 	int_stack_pop(stk, &next_to_top_value);
-	if (next_to_top_value == 0)
-		return -1; // Error code for division by zero
 	return int_stack_push(stk, top_value / next_to_top_value);
 }
 
@@ -118,10 +116,10 @@ int int_stack_divmod(int_stack_t *stk) {
 	int divisor, dividend;
 	int_stack_pop(stk, &divisor);
 	int_stack_pop(stk, &dividend);
-	if (divisor == 0)
-		return -1; // Error code for division by zero
-	int_stack_push(stk, dividend % divisor);
-	return int_stack_push(stk, dividend / divisor);
+	int remainder = dividend % divisor;
+	int quotient = dividen / divisord
+	int_stack_push(stk, remainder);
+	return int_stack_push(stk, quotient);
 }
 
 int int_stack_mod(int_stack_t *stk) {
@@ -130,22 +128,24 @@ int int_stack_mod(int_stack_t *stk) {
 	int divisor, dividend;
 	int_stack_pop(stk, &divisor);
 	int_stack_pop(stk, &dividend);	
-	if(divisor == 0)
-		return -1; //error code for division by zero
 	return int_stack_push(stk, dividend % divisor);
 }
 
 //stack manipulation 
 int int_stack_over(int_stack_t *stk) {
 	if(stk->size < 2)
-		return -1;// error code for not enough elements 
-	int n1 = stk->data[stk-<size -2];
-	return int_stack_push(stk,n1);
+		return 0;
+	int top_value, next_to_top_value
+	int_stack_pop(stk, &top_value);
+	int_stack_pop(stk, &next_to_top_value);
+	int_stack_push(stk, next_to_top_value);
+	int_stack_push(stk, top_value);
+	return int_stack_push(stk, next_to_top_value);
 }
 
 int int_stack_rot(int_stack_t *stk) {
 	if(stk->size < 3) 
-		return -1;//error code for not enough elements 
+		return 0;//error code for not enough elements 
 	int top, middle, bottom;
 	int stack_pop(stk, &top);
 	int stack_pop(stk, &middle);
@@ -166,7 +166,7 @@ int int_stack_drop(int_stack_t *stk){
 
 int int_stack_two_swap(int_stack_t *stk) {
 	if(stk->size < 4)
-		return -1;// error code for not enough elements 
+		return 0;// error code for not enough elements 
 	int d1_top, d1_bottom, d2_top, d2_bottom;
 	int_stack_pop(stk, &d1_top);
 	int_stack_pop(stk, &d1_bottom);
@@ -175,35 +175,41 @@ int int_stack_two_swap(int_stack_t *stk) {
 	int_stack_push(stk, d1_bottom);
 	int_stack_push(stk, d1_top);
 	int_stack_push(stk, d2_bottom);
-	int_stack_push(stk, d2_top);
-	return 0; //sucess
+	return int_stack_push(stk, d2_top);
+	
 }
 
 int int_stack_two_dup(int_stack_t *stk) {
 	if(stk->size < 2)
-		return -1; // error code for not enough elements
-	int top, second_top;
-	second_top = stk->data[stk->size - 2];
-	top = stk->data[stk->size - 1];
-	int_stack_push(stk, second_top);
-	int_stack_push(stk, top);
-	return 0; //sucess 
+		return 0; // error code for not enough elements
+	int s1, s2;
+	int_stack_pop(stk, &s1);
+	int_stack_pop(stk, &s2);
+	int_stack_push(stk, s2);
+	int_stack_push(stk, s1);
+	int_stack_push(stk, s2);
+	return int_stack_push(stk, s1); 
 }
 
 int int_stack_two_over(int_stack_t *stk) {
 	if (stk->size < 4)
-		return -1; // Error code for not enough elements
-	int second_top, third_top;
-	third_top = stk->data[stk->size - 3];
-	second_top = stk->data[stk->size - 2];
-	int_stack_push(stk, third_top);
-	int_stack_push(stk, second_top);
-	return 0; // Success
+		return 0; // Error code for not enough elements
+	int s1, s2, s3, s4
+	int_stack_pop(stk, &s1);
+	int_stack_pop(stk, &s2;);
+	int_stack_pop(stk, &s3);
+	int_stack_pop(stk, &s4);
+	int_stack_push(stk, s4);
+	int_stack_push(stk, s3);
+	int_stack_push(stk, s2);
+	int_stack_push(stk, s1);
+	int_stack_push(stk, s4);
+	return int_stack_push(stk, s3);
 }
 
 int int_stack_two_drop(int_stack_t *stk) {
 	if (stk->size < 2)
-		return -1; // Error code for not enough elements
+		return 0; // Error code for not enough elements
 	int top_value;
 	int_stack_pop(stk, &top_value);
 	int_stack_pop(stk, &top_value);
