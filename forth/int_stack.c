@@ -94,7 +94,7 @@ int int_stack_subtraction(int_stack_t *stk){
 
 int int_stack_multiply(int_stack_t *stk){
 	if(stk->size < 2)
-		rturn 0; 
+		return 0; 
 	int top_value, next_to_top_value;
 	int_stack_pop(stk, &top_value);
 	int_stack_pop(stk, &next_to_top_value);
@@ -124,7 +124,7 @@ int int_stack_divmod(int_stack_t *stk) {
 	return int_stack_push(stk, dividend / divisor);
 }
 
-int int_stack_mod(it_stack_t *stk) {
+int int_stack_mod(int_stack_t *stk) {
 	if(stk->size < 2)
 		return 0;
 	int divisor, dividend;
@@ -185,7 +185,7 @@ int int_stack_two_dup(int_stack_t *stk) {
 	int top, second_top;
 	second_top = stk->data[stk->size - 2];
 	top = stk->data[stk->size - 1];
-	int_stack_push(stk, second_top
+	int_stack_push(stk, second_top);
 	int_stack_push(stk, top);
 	return 0; //sucess 
 }

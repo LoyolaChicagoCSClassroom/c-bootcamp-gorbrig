@@ -2,12 +2,10 @@ FetchContent_MakeAvailable(googletest)
 
 enable_testing()
 
-
-
 add_executable(
-	int_stack.c 
+	forth
 	int_stack.h
-)
+	int_stack.c)
 
 add_executable(
         int_stack_tests
