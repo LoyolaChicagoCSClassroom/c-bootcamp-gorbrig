@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include "token.h"
 #include "int_stack.h" 
 #include <string.h>
 
@@ -19,7 +20,9 @@ int main() {
         if (line[read - 1] == '\n') {
             line[read - 1] = '\0'; // Remove newline character
         }
-
+	
+	separate_token(&stack, line);
+	int_stack_print(&stack, stdout);
         if (strcmp(line, "exit") == 0) {
             break; // Exit loop
         }
