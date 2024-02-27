@@ -24,7 +24,7 @@ extern int int_stack_top(int_stack_t *stk, int *top_value);
 extern int int_stack_dup(int_stack_t *stk);
 extern int int_stack_swap(int_stack_t *stk);
 extern int int_stack_add(int_stack_t *stk);
-extern int int_stack_subtract(int_stack_t *stk);
+extern int int_stack_subtraction(int_stack_t *stk);
 extern int int_stack_multiply(int_stack_t *stk);
 extern int int_stack_divide(int_stack_t *stk);
 extern int int_stack_divmod(int_stack_t *stk);

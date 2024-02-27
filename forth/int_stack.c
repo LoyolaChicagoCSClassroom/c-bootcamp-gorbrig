@@ -175,7 +175,7 @@ int int_stack_drop(int_stack_t *stk){
 
 //double element operations 
 
-int int_stack_swap(int_stack_t *stk) {
+int int_stack_two_swap(int_stack_t *stk) {
 	if(stk->size < 4)
 		return 0;// error code for not enough elements 
 	int d1_top, d1_bottom, d2_top, d2_bottom;

@@ -48,15 +48,6 @@ const char* token_type_to_string(token_type_t type) {
     }
 }
 
-    
-    printf("Stack: ");
-    for (i = stk->size - 1; i >= 0; i--) {
-        printf("%d ", elements[i]);
-    }
-    printf("<- Top\n");
-}
-
-
 void separate_token(int_stack_t *stk, char *text) {
     const char *space = " ";
     char *token;
@@ -73,15 +64,15 @@ void separate_token(int_stack_t *stk, char *text) {
                 if (strcmp(token, "+") == 0) {        
                     int_stack_add(stk);
                 } else if (strcmp(token, "-") == 0) {
-                    int_stack_subtract(stk);
+                    int_stack_subtraction(stk);
                 } else if (strcmp(token, "*") == 0){
-                    int_stack_mult(stk);
+                    int_stack_multiply(stk);
                 } else if (strcmp(token, "/mod")==0){
                     int_stack_divmod(stk);
                 } else if (strcmp(token, ".")==0){
                     int_stack_pop(stk, &top_value);
                 } else {
-                    int_stack_div(stk);
+                    int_stack_divide(stk);
                 } 
             } else {
                 int_stack_pop(stk, &top_value);
@@ -102,14 +93,13 @@ void separate_token(int_stack_t *stk, char *text) {
             } else if (strcmp(token, "swap")==0){
                 int_stack_swap(stk);
             } else if (strcmp(token, "2swap")==0){
-                int_stack_2swap(stk);
+                int_stack_two_swap(stk);
             } else if (strcmp(token, "2dup")==0){
-                int_stack_2dup(stk);
+                int_stack_two_dup(stk);
             } else if (strcmp(token, "2over")==0){
-                int_stack_2over(stk);
+                int_stack_two_over(stk);
             } else if (strcmp(token, "2drop")==0){
-                int_stack_pop(stk, &top_value);
-                int_stack_pop(stk, &top_value);
+                int_stack_two_drop(stk);
             } else if (strcmp(token, "mod")==0){
                 int_stack_mod(stk);
             } else {
@@ -118,3 +108,4 @@ void separate_token(int_stack_t *stk, char *text) {
         }
     }
 }
+
