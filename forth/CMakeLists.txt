@@ -7,6 +7,8 @@ add_executable(
 	int_stack.h
 	int_stack.c
 	main.c
+	token.c
+	token.h
 )
 
 add_executable(
