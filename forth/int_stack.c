@@ -117,7 +117,7 @@ int int_stack_divmod(int_stack_t *stk) {
 	int_stack_pop(stk, &divisor);
 	int_stack_pop(stk, &dividend);
 	int remainder = dividend % divisor;
-	int quotient = dividen / divisord
+	int quotient = dividend / divisor;
 	int_stack_push(stk, remainder);
 	return int_stack_push(stk, quotient);
 }
@@ -135,7 +135,7 @@ int int_stack_mod(int_stack_t *stk) {
 int int_stack_over(int_stack_t *stk) {
 	if(stk->size < 2)
 		return 0;
-	int top_value, next_to_top_value
+	int top_value, next_to_top_value;
 	int_stack_pop(stk, &top_value);
 	int_stack_pop(stk, &next_to_top_value);
 	int_stack_push(stk, next_to_top_value);
@@ -143,18 +143,29 @@ int int_stack_over(int_stack_t *stk) {
 	return int_stack_push(stk, next_to_top_value);
 }
 
-int int_stack_rot(int_stack_t *stk) {
-	if(stk->size < 3) 
-		return 0;//error code for not enough elements 
-	int top, middle, bottom;
-	int stack_pop(stk, &top);
-	int stack_pop(stk, &middle);
-	int stack_pop(stk, &bottom);
-	int stack_push(stk, middle);
-	int stack_push(stk, top);
-	return int_stack_push(stk, bottom);
-}
+//int int_stack_rot(int_stack_t *stk) {
+//	if(stk->size < 3) 
+//		return 0;//error code for not enough elements 
+//	int top, middle, bottom;
+//	int stack_pop(stk, &top);
+//	int stack_pop(stk, &middle);
+//	int stack_pop(stk, &bottom);
+//	int stack_push(stk, middle);
+//	int stack_push(stk, top);
+//	return int_stack_push(stk, bottom);
+//}
 
+int int_stack_rot(int_stack_t *stk){
+	if(stk->size < 2)
+		return 0;
+	int v1, v2, v3;
+	int_stack_pop(stk, &v1);
+	int_stack_pop(stk, &v2);
+	int_stack_pop(stk, &v3);
+	int_stack_push(stk, v2);
+	int_stack_push(stk, v1);
+	return int_stack_push(stk, v3);
+}
 int int_stack_drop(int_stack_t *stk){
 	if(stk->size == 0)
 		return -1;//error code for stack underflow 
@@ -194,9 +205,9 @@ int int_stack_two_dup(int_stack_t *stk) {
 int int_stack_two_over(int_stack_t *stk) {
 	if (stk->size < 4)
 		return 0; // Error code for not enough elements
-	int s1, s2, s3, s4
+	int s1, s2, s3, s4;
 	int_stack_pop(stk, &s1);
-	int_stack_pop(stk, &s2;);
+	int_stack_pop(stk, &s2);
 	int_stack_pop(stk, &s3);
 	int_stack_pop(stk, &s4);
 	int_stack_push(stk, s4);

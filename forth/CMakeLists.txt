@@ -5,7 +5,9 @@ enable_testing()
 add_executable(
 	forth
 	int_stack.h
-	int_stack.c)
+	int_stack.c
+	main.c
+)
 
 add_executable(
         int_stack_tests
