@@ -93,13 +93,13 @@ void separate_token(int_stack_t *stk, char *text) {
             } else if (strcmp(token, "swap")==0){
                 int_stack_swap(stk);
             } else if (strcmp(token, "2swap")==0){
-                int_stack_two_swap(stk);
+                int_stack_2swap(stk);
             } else if (strcmp(token, "2dup")==0){
-                int_stack_two_dup(stk);
+                int_stack_2dup(stk);
             } else if (strcmp(token, "2over")==0){
-                int_stack_two_over(stk);
+                int_stack_2over(stk);
             } else if (strcmp(token, "2drop")==0){
-                int_stack_two_drop(stk);
+                int_stack_2drop(stk);
             } else if (strcmp(token, "mod")==0){
                 int_stack_mod(stk);
             } else {

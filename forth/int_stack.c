@@ -175,7 +175,7 @@ int int_stack_drop(int_stack_t *stk){
 
 //double element operations 
 
-int int_stack_two_swap(int_stack_t *stk) {
+int int_stack_2swap(int_stack_t *stk) {
 	if(stk->size < 4)
 		return 0;// error code for not enough elements 
 	int d1_top, d1_bottom, d2_top, d2_bottom;
@@ -190,7 +190,7 @@ int int_stack_two_swap(int_stack_t *stk) {
 	
 }
 
-int int_stack_two_dup(int_stack_t *stk) {
+int int_stack_2dup(int_stack_t *stk) {
 	if(stk->size < 2)
 		return 0; // error code for not enough elements
 	int s1, s2;
@@ -202,7 +202,7 @@ int int_stack_two_dup(int_stack_t *stk) {
 	return int_stack_push(stk, s1); 
 }
 
-int int_stack_two_over(int_stack_t *stk) {
+int int_stack_2over(int_stack_t *stk) {
 	if (stk->size < 4)
 		return 0; // Error code for not enough elements
 	int s1, s2, s3, s4;
@@ -218,7 +218,7 @@ int int_stack_two_over(int_stack_t *stk) {
 	return int_stack_push(stk, s3);
 }
 
-int int_stack_two_drop(int_stack_t *stk) {
+int int_stack_2drop(int_stack_t *stk) {
 	if (stk->size < 2)
 		return 0; // Error code for not enough elements
 	int top_value;
