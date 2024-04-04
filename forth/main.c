@@ -3,6 +3,7 @@
 #include "token.h"
 #include "int_stack.h" 
 #include <string.h>
+#include "variables.h"
 
 int main() {
     int_stack_t stack; // Correctly declare the stack variable
@@ -13,6 +14,9 @@ int main() {
     ssize_t read;
 
     int_stack_init(&stack, capacity); 
+
+    VarNode* varList = NULL;
+    var_list_init(&varList);
 
     printf("Enter numbers or operations (+, -, *, /). Type 'exit' to quit.\n");
 
@@ -28,6 +32,9 @@ int main() {
         }
 
     }
+
+    
+    var_list_destroy(varList); 
 
     free(line);
 

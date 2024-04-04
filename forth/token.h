@@ -10,7 +10,9 @@ typedef enum token_type_t {
     OPERATOR,
     SYMBOL,
     WORD,
-    ILLEGAL
+    ILLEGAL,
+    VARIABLE,
+    CONSTANT
 
 } token_type_t;
 

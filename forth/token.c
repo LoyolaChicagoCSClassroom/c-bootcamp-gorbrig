@@ -109,3 +109,15 @@ void separate_token(int_stack_t *stk, char *text) {
     }
 }
 
+void separate_token(int_stack_t *stk, VarNode** varList, char *text) {
+    // Your existing token processing logic...
+
+    // Example of extending for variable handling:
+    VarNode* varNode;
+    if ((varNode = var_list_find(*varList, token)) != NULL) {
+        int_stack_push(stk, varNode->value);
+    } else {
+        // Handle as before
+    }
+}
+
