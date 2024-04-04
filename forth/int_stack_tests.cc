@@ -1,4 +1,3 @@
- 
 //
 // Created by George Thiruvathukal on 2/17/24.
 //
@@ -76,7 +75,7 @@ TEST(IntStackTests, Init) {
 TEST(IntStackTests, Push) {
 	int_stack_t stack;
 	int_stack_init(&stack, 2); // initilize stack with capacity of 2 
-	ASSERT_TRUE(int_stack_push(&stack, 10)): // pushing 1st element 
+	ASSERT_TRUE(int_stack_push(&stack, 10)); // pushing 1st element 
 	ASSERT_TRUE(int_stack_push(&stack, 20)); // pushing the 2nd element
 	ASSERT_FALSE(int_stack_push(&stack, 30)); // pushing the 3rd elemet. Shouldn't work because capacity is reached
 	ASSERT_EQ(stack.size, 2); //stack size should be 2
@@ -100,7 +99,7 @@ TEST(IntStacktests, Top) {
 	int_stack_t stack;
 	int_stack_init(&stack, 5);
 	int_stack_push(&stack, 10);
-	int)stack_push(&stack, 20);
+	int_stack_push(&stack, 20);
 
 	int top_value;
 	ASSERT_TRUE(int_stack_top(&stack, &top_value)); //should get the top value
@@ -111,7 +110,8 @@ TEST(IntStacktests, Top) {
 	ASSERT_EQ(top_value, 10); // now top should be 10
 
 	int_stack_pop(&stack, &top_value);
-	ASSERT_FALSE(int_stack_top(&stack, &top_value)); should fail because the stack is now empty 
+	// should fail because the stack is now empty
+    ASSERT_FALSE(int_stack_top(&stack, &top_value)); 
 }
 
 TEST(IntStackTests, Dup) {
@@ -149,7 +149,7 @@ TEST(IntStackTests, Add) {
 	int_stack_add(&stack);
 	
 	int top_value;
-	ASSERT_TRUE(int_stack_top(&stack, &top_value)):
+	ASSERT_TRUE(int_stack_top(&stack, &top_value));
 	ASSERT_EQ(top_value, 30); // checks if the result is cirect 
 }
 
@@ -172,7 +172,7 @@ TEST(IntStackTests, Multiply) {
 	int_stack_push(&stack, 3);
 	int_stack_multiply(&stack);
 
-	int_top_value;
+	int top_value;
 	ASSERT_TRUE(int_stack_top(&stack, &top_value));
 	ASSERT_EQ(top_value, 6);
 }
@@ -212,7 +212,7 @@ TEST(IntStackTests, Mod) {
 	ASSERT_TRUE(int_stack_mod(&stack));
 
 	int result; 
-	ASSERT_TRUE(int_stack_top(&stack, &result);
+	ASSERT_TRUE(int_stack_top(&stack, &result));
 	ASSERT_EQ(result, 1);
 }
 
