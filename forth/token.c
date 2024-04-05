@@ -4,6 +4,7 @@
 #include <ctype.h>
 #include <string.h>
 #include "int_stack.h"
+#include "variables.h" 
 
 token_t* intialize_token(token_type_t type, const char* text){
     token_t* newToken = (token_t*)malloc(sizeof(token_t));
@@ -109,15 +110,12 @@ void separate_token(int_stack_t *stk, char *text) {
     }
 }
 
-void separate_token(int_stack_t *stk, VarNode** varList, char *text) {
-    // Your existing token processing logic...
-
-    // Example of extending for variable handling:
-    VarNode* varNode;
-    if ((varNode = var_list_find(*varList, token)) != NULL) {
-        int_stack_push(stk, varNode->value);
-    } else {
-        // Handle as before
+token_t* initialize_token(token_type_t type, const char* text){
+    token_t* newToken = (token_t*)malloc(sizeof(token_t));
+    if (newToken == NULL) {
+        return NULL;
     }
+    newToken->type = type; // Set type
+    newToken->text = strdup(text); // Duplicate and assign the text
+    return newToken;
 }
-

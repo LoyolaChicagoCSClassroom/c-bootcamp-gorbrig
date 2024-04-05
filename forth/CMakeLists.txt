@@ -9,6 +9,7 @@ add_executable(
 	main.c
 	token.c
 	token.h
+	variables.c
 )
 
 add_executable(
